@@ -3,8 +3,8 @@ package edu.wpi.first.Team61Robot;
 
 import edu.wpi.first.Team61Robot.commands.ShiftToClimb;
 import edu.wpi.first.Team61Robot.commands.ShiftToDrive;
-import edu.wpi.first.Team61Robot.commands.ShiftToShooter;
-import edu.wpi.first.Team61Robot.commands.ShiftToWheel;
+
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -67,8 +67,7 @@ public class OI {
       driveButton.whenPressed (new ShiftToDrive());
       climbButton.whenPressed (new ShiftToClimb());
         
-      fifthWheelButton.whenPressed(new ShiftToWheel());
-      shooterButton.whenPressed(new ShiftToShooter());
+      
 
     }
     /**
