@@ -3,9 +3,9 @@ package edu.wpi.first.Team61Robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.Team61Robot.OI;
 import edu.wpi.first.Team61Robot.subsystems.DriveTrain;
-import edu.wpi.first.Team61Robot.subsystems.FifthWheel;
+
 import edu.wpi.first.Team61Robot.subsystems.Shifter;
-import edu.wpi.first.Team61Robot.subsystems.FifthShifter;
+
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -19,9 +19,9 @@ public abstract class CommandBase extends Command {
     // Create a single static instance of all of your subsystems
     
     public static DriveTrain drivetrain = new DriveTrain();
-    public static FifthWheel fifthWheel = new FifthWheel();
+    
     public static Shifter shifter = new Shifter ();
-    public static FifthShifter fifthShifter = new FifthShifter();
+    
     
     
     public static double autoLeftSpeed[]        = { -0.5, -0.4, -0.5, -0.4, -0.5 };
