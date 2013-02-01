@@ -21,17 +21,20 @@ public class OI {
 
     Joystick jLeft = new Joystick(1);    
     Joystick jRight = new Joystick(2);   
-    Joystick jFifthWheel = new Joystick(3);
-    Joystick jShooter = new Joystick(4);
+    Joystick jThree = new Joystick(3);
+    Joystick jFour = new Joystick(4);
    Button driveButton = new JoystickButton(jLeft, 1);
    Button climbButton = new JoystickButton(jRight, 1);
-   Button fifthWheelButton = new JoystickButton(jFifthWheel, 1);
-   Button shooterButton = new JoystickButton(jShooter, 1);
+   Button rightClaw = new JoystickButton(jThree, 1);
+   Button leftClaw = new JoystickButton(jFour, 1);
    Button forwardButton = new JoystickButton (jRight,2);
    Button reverseButton = new JoystickButton (jRight,3) ; 
+   
+   
    private static boolean driveMode = true;
    private static boolean reverseDriveMode=false ;
-   
+   public static boolean rightClawUp = true;
+   public static boolean leftClawUp = true; 
    
     // Button shootButton = new JoystickButton(jShooter, 1);
     
@@ -111,8 +114,7 @@ public class OI {
         return (jRight.getY());
     }
     
-    public double getFifthSpeed() {
-        return (jFifthWheel.getY());
-    }
+
+    
 }
 
