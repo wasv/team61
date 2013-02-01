@@ -6,25 +6,23 @@ package edu.wpi.first.Team61Robot.commands;
 
 /**
  *
- * @author Jack Cone
+ * @author FrankAdmin
  */
-public class RightClawDown extends CommandBase {
+public class LeftClawUp extends CommandBase {
     
-    public RightClawDown() {
+    public LeftClawUp() {
         // Use requires() here to declare subsystem dependencies
         requires(clawShifter);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-     setTimeout(0.2);
-    
+        setTimeout(0.2);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    clawShifter.shiftRightDown(true);
-    
+        clawShifter.shiftLeftUp(true);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -34,8 +32,7 @@ public class RightClawDown extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
-        
-        clawShifter.shiftRightDown(false);
+        clawShifter.shiftLeftUp(false);
     }
 
     // Called when another command which requires one or more of the same
