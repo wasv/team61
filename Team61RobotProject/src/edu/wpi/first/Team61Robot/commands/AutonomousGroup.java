@@ -14,12 +14,16 @@ public class AutonomousGroup extends CommandGroup {
     
     public AutonomousGroup() {
         
-        addSequential(new AutoDriveSeq0());
-        addSequential(new AutoDriveSeq1());
-        addSequential(new AutoDriveSeq2());
-        addSequential(new AutoDriveSeq3());
-        addSequential(new AutoDriveSeq4());
-        
+        // addSequential(new AutoDriveSeq0());
+        // addSequential(new AutoDriveSeq1());
+        // addSequential(new AutoDriveSeq2());
+        // addSequential(new AutoDriveSeq3());
+        // addSequential(new AutoDriveSeq4());
+
+        for (int i=0;i<CommandBase.autoDriveTime.length;i++)
+        {
+            addSequential(new AutoLooping(i));
+        }
         // addSequential(new AutoDrive(leftSpeed, rightSpeed, time));
         // addSequential(new AutoTurn(direction, time));
         
