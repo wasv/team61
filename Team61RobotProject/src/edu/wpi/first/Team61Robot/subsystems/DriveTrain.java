@@ -73,7 +73,7 @@ public class DriveTrain extends PIDSubsystem {
     }
     
     public void climb(double left, double right) {
-        moveLeftArm(left);
+        moveLeftArm(right);
         moveRightArm(right);
     }
     
