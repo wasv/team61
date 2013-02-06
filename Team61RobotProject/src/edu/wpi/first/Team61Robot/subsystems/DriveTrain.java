@@ -72,8 +72,8 @@ public class DriveTrain extends PIDSubsystem {
         rightMotor.set(left);
     }
     
-    public void climb(double left, double right) {
-        moveLeftArm(right);
+    public void climb(double right) {
+        moveLeftArm(-1.0*(right));
         moveRightArm(right);
     }
     

@@ -34,7 +34,7 @@ public class DriveWithJoysticks extends CommandBase {
           }
         }
         else {
-            drivetrain.climb(oi.getLeftSpeed(),oi.getRightSpeed()*-1.0);
+            drivetrain.climb(oi.getRightSpeed());
         
         }
     }
