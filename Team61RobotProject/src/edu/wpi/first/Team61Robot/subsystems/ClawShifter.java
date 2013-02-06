@@ -34,26 +34,28 @@ public class ClawShifter extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
 
-   
-    public void doNothing(){
-    ;
-}
+   /**
+    *   Tells the claw shifter to do nothing.
+    */
+    public void doNothing() {
+        ;
+    }
     
-    public void shiftLeftDown(boolean on){
+    public void shiftLeftDown(boolean on) {
        leftClawDown.set(on);
     }
-public void shiftLeftUp(boolean on){
+    
+    public void shiftLeftUp(boolean on) {
        leftClawUp.set(on);
-       
-       
-}
-public void shiftRightDown(boolean on){
+    }
+    
+    public void shiftRightDown(boolean on) {
        rightClawDown.set(on);
-}
+    }
 
-public void shiftRightUp(boolean on){
+    public void shiftRightUp(boolean on){
        rightClawUp.set(on);
-}
+    }
 
 
 

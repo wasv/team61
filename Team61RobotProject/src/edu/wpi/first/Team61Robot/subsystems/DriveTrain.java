@@ -7,7 +7,6 @@ package edu.wpi.first.Team61Robot.subsystems;
 import edu.wpi.first.Team61Robot.RobotMap;
 import edu.wpi.first.Team61Robot.commands.DriveWithJoysticks;
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
@@ -31,8 +30,8 @@ public class DriveTrain extends PIDSubsystem {
     
     // private DigitalInput leftTopLimit = new DigitalInput(RobotMap.leftTopLimitChannel);
     // private DigitalInput leftBottomLimit = new DigitalInput(RobotMap.leftBottomLimitChannel);
-    private DigitalInput rightTopLimit = new DigitalInput(RobotMap.rightTopLimitChannel);
-    private DigitalInput rightBottomLimit = new DigitalInput(RobotMap.rightBottomLimitChannel);
+    private DigitalInput topLimit = new DigitalInput(RobotMap.rightTopLimitChannel);
+    private DigitalInput bottomLimit = new DigitalInput(RobotMap.rightBottomLimitChannel);
 
     // Initialize your subsystem here
     public DriveTrain() {
@@ -62,16 +61,30 @@ public class DriveTrain extends PIDSubsystem {
         // e.g. yourMotor.set(output);
     }
     
+    /**
+     * Tank drive for main drivetrain.
+     * @param left Left motor value
+     * @param right Right motor value
+     */
     public void tankDrive(double left, double right) {
-        leftMotor.set(left);
+        leftMotor.set(left*-1.0);
         rightMotor.set(right);
     }
     
+    /**
+     * Reversed tankDrive.
+     * @param left Right motor value
+     * @param right Left motor value
+     */
     public void reverseTankDrive(double left, double right) {
-        leftMotor.set(right);
+        leftMotor.set(right*-1.0);
         rightMotor.set(left);
     }
     
+    /**
+     * Climbs the robot.
+     * @param right Arm movement
+     */
     public void climb(double right) {
         moveLeftArm(-1.0*(right));
         moveRightArm(right);
