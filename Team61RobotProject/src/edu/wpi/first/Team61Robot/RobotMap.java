@@ -30,8 +30,8 @@ public class RobotMap {
     public static final int  leftClawDownSolenoid = 12;
             
     // Digital inputs
-    public static final int leftTopLimitChannel = 1;
-    public static final int leftBottomLimitChannel = 2;
+    // public static final int leftTopLimitChannel = 1;
+    // public static final int leftBottomLimitChannel = 2;
     public static final int rightTopLimitChannel = 3;
     public static final int rightBottomLimitChannel = 4;
     

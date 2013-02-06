@@ -29,8 +29,8 @@ public class DriveTrain extends PIDSubsystem {
     private SpeedController leftMotor = new Victor(RobotMap.leftMotor);
     private SpeedController rightMotor = new Victor(RobotMap.rightMotor);
     
-    private DigitalInput leftTopLimit = new DigitalInput(RobotMap.leftTopLimitChannel);
-    private DigitalInput leftBottomLimit = new DigitalInput(RobotMap.leftBottomLimitChannel);
+    // private DigitalInput leftTopLimit = new DigitalInput(RobotMap.leftTopLimitChannel);
+    // private DigitalInput leftBottomLimit = new DigitalInput(RobotMap.leftBottomLimitChannel);
     private DigitalInput rightTopLimit = new DigitalInput(RobotMap.rightTopLimitChannel);
     private DigitalInput rightBottomLimit = new DigitalInput(RobotMap.rightBottomLimitChannel);
 
