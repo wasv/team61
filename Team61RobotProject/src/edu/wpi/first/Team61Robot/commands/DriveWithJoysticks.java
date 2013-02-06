@@ -6,7 +6,7 @@ package edu.wpi.first.Team61Robot.commands;
 
 /**
  *
- * @author FrankAdmin
+ * @author FrankAdmin   
  */
 public class DriveWithJoysticks extends CommandBase {
         
@@ -34,7 +34,7 @@ public class DriveWithJoysticks extends CommandBase {
           }
         }
         else {
-            drivetrain.climb(oi.getLeftSpeed()*-1.0,oi.getRightSpeed());
+            drivetrain.climb(oi.getLeftSpeed(),oi.getRightSpeed()*-1.0);
         
         }
     }
