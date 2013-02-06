@@ -20,9 +20,18 @@ public class AutonomousGroup extends CommandGroup {
         // addSequential(new AutoDriveSeq3());
         // addSequential(new AutoDriveSeq4());
 
-        for (int i=0;i<CommandBase.autoDriveTime.length;i++)
+        if ((CommandBase.autoDriveTime.length == CommandBase.autoRightSpeed.length) && (CommandBase.autoRightSpeed.length == CommandBase.autoLeftSpeed.length))
         {
-            addSequential(new AutoLooping(i));
+            for (int i=0;i<CommandBase.autoDriveTime.length;i++)
+            {
+                addSequential(new AutoLooping(i));
+            }
+        }
+        else
+        {
+            System.err.println("[FATAL] Could not start autonomous because array lengths are not equal!");
+            System.err.println("[FATAL] autoDriveTime.length: " + CommandBase.autoDriveTime.length + "; autoRightSpeed.length: " + CommandBase.autoRightSpeed.length + "; autoLeftSpeed.length: " + CommandBase.autoLeftSpeed.length);
+            
         }
         // addSequential(new AutoDrive(leftSpeed, rightSpeed, time));
         // addSequential(new AutoTurn(direction, time));

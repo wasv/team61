@@ -6,15 +6,14 @@ package edu.wpi.first.Team61Robot.commands;
 
 /**
  *
- * @author FrankAdmin
+ * @author Jack Cone
  */
-public class DriveWithJoysticks extends CommandBase {
-        
-    public DriveWithJoysticks() {
+public class MoveDumper extends CommandBase {
+    
+    public MoveDumper() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(drivetrain);
-        // System.out.println("Class name is [" + this.getClass().getName() + "]");
+        requires(dumper);
     }
 
     // Called just before this Command runs the first time
@@ -23,21 +22,9 @@ public class DriveWithJoysticks extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if (oi.weAreDriving()) {
-           
-          if (oi.weAreReversing()){
-              drivetrain.reverseTankDrive(oi.getLeftSpeed()*-1.0,oi.getRightSpeed());
-          }
-           else
-          {
-              drivetrain.tankDrive(oi.getLeftSpeed()*-1.0,oi.getRightSpeed());
-          }
-        }
-        else {
-            drivetrain.climb(oi.getLeftSpeed()*-1.0,oi.getRightSpeed());
-        
-        }
+        dumper.move(oi.getDumperSpeed());
     }
+
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;

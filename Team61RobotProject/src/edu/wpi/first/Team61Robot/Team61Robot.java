@@ -36,7 +36,7 @@ public class Team61Robot extends IterativeRobot {
     public void robotInit() {
         // instantiate the command used for the autonomous period
         System.out.println("+-------------------------------------------+");
-        System.out.println("| Team 61 - Software Version: 2013-01-24-01 |");
+        System.out.println("| Team 61 - Software Version: 2013-02-05-01 |");
         System.out.println("+-------------------------------------------+");
 
         autonomousCommand = new AutonomousGroup();

@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.Team61Robot.OI;
 import edu.wpi.first.Team61Robot.subsystems.ClawShifter;
 import edu.wpi.first.Team61Robot.subsystems.DriveTrain;
+import edu.wpi.first.Team61Robot.subsystems.Dumper;
 
 import edu.wpi.first.Team61Robot.subsystems.Shifter;
 
@@ -22,6 +23,7 @@ public abstract class CommandBase extends Command {
     public static DriveTrain drivetrain = new DriveTrain();
     public static Shifter shifter = new Shifter ();
     public static ClawShifter clawShifter = new ClawShifter() ;
+    public static Dumper dumper = new Dumper();
     
     
     

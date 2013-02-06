@@ -28,7 +28,7 @@ public class OI {
    Button rightClaw = new JoystickButton(jThree, 1);
    Button leftClaw = new JoystickButton(jFour, 1);
    Button forwardButton = new JoystickButton (jRight,2);
-   Button reverseButton = new JoystickButton (jRight,3) ; 
+   Button reverseButton = new JoystickButton (jRight,3);
    
    
    private static boolean driveMode = true;
@@ -112,6 +112,9 @@ public class OI {
     
     public double getRightSpeed() {
         return (jRight.getY());
+    }
+    public double getDumperSpeed() {
+        return (jThree.getY());
     }
     
 
