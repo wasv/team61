@@ -24,17 +24,15 @@ public class RobotMap {
     public static final int armSolenoid = 6;
     public static final int rightClawUpSolenoid = 7;
     public static final int leftClawUpSolenoid = 8;
-    //public static final int compressorSensor= 9;
+    public static final int compressorSensor= 9;
     public static final int hoodSolenoid= 10; 
-     public static final int rightClawDownSolenoid = 11;
+    public static final int rightClawDownSolenoid = 11;
     public static final int  leftClawDownSolenoid = 12;
             
     // Digital inputs
-    // public static final int leftTopLimitChannel = 1;
-    // public static final int leftBottomLimitChannel = 2;
     public static final int rightTopLimitChannel = 3;
     public static final int rightBottomLimitChannel = 4;
     
-    //public static final int compressorRelay = 1;
+    public static final int compressorRelay = 6;
 
 }
