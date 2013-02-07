@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.Team61Robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -29,6 +30,28 @@ public class Team61Robot extends IterativeRobot {
 
     private Compressor compressor;
 
+    /* public void startCompetition() {
+            while (true) {
+                // Wait for robot to be enabled
+                while (isDisabled()) {
+                    Timer.delay(.01);
+                }
+                // Now enabled - check if we should run Autonomous code
+                if (isAutonomous()) {
+                    autonomous();
+                    while (isAutonomous() && !isDisabled()) {
+                        Timer.delay(.01);
+                    }
+                } else {
+                operatorControl();
+                // run the operator control method
+                while (isOperatorControl() && !isDisabled()) {
+                    Timer.delay(.01);
+                }
+            }
+        }
+    } */
+    
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.

@@ -1,6 +1,8 @@
 
 package edu.wpi.first.Team61Robot;
 
+import edu.wpi.first.Team61Robot.commands.HangerIn;
+import edu.wpi.first.Team61Robot.commands.HangerOut;
 import edu.wpi.first.Team61Robot.commands.ShiftToClimb;
 import edu.wpi.first.Team61Robot.commands.ShiftToDrive;
 
@@ -25,8 +27,8 @@ public class OI {
     Joystick jFour = new Joystick(4);
    Button driveButton = new JoystickButton(jLeft, 1);
    Button climbButton = new JoystickButton(jRight, 1);
-   Button rightClaw = new JoystickButton(jThree, 1);
-   Button leftClaw = new JoystickButton(jFour, 1);
+   Button hangerOut = new JoystickButton(jFour, 3);
+   Button hangerIn = new JoystickButton(jFour, 2);
    Button forwardButton = new JoystickButton (jRight,2);
    Button reverseButton = new JoystickButton (jRight,3);
    
@@ -69,6 +71,10 @@ public class OI {
       
       driveButton.whenPressed (new ShiftToDrive());
       climbButton.whenPressed (new ShiftToClimb());
+      hangerOut.whenPressed(new HangerOut());
+      hangerIn.whenPressed(new HangerIn());
+      
+      
         
       
 
