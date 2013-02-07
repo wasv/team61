@@ -45,7 +45,9 @@ public class Team61Robot extends IterativeRobot {
         
         // Make compressor active on startup so it can be used in the pits
         compressor = new Compressor(RobotMap.compressorRelay,RobotMap.compressorSensor);
-        compressor.start();
+        
+        compressor.stop();
+        
         
         CommandBase.init();
     }
@@ -55,8 +57,9 @@ public class Team61Robot extends IterativeRobot {
         autonomousCommand.start();
 
         // Don't want compressor active during matches
-        compressor.stop();
-        compressor.free();
+        
+        //compressor.stop();
+        //compressor.free();
         
     }
 
@@ -73,6 +76,7 @@ public class Team61Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         autonomousCommand.cancel();
+        compressor.start();
     }
 
     /**

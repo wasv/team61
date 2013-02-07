@@ -89,7 +89,10 @@ public class DriveTrain extends PIDSubsystem {
         moveLeftArm(-1.0*(right));
         moveRightArm(right);
     }
-    
+    /**
+     * 
+     * @param speed 
+     */
     private void moveLeftArm(double speed)
     {
         leftMotor.set(speed);
