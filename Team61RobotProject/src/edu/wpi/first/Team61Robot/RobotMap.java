@@ -30,7 +30,7 @@ public class RobotMap {
     public static final int rightTopLimitChannel = 3;
     public static final int rightBottomLimitChannel = 4;
 
-    public static final int compressorSensor= 1;    
-    public static final int compressorRelay = 2;
+    public static final int compressorSensor = 1;    
+    public static final int compressorRelay = 1;
 
 }
