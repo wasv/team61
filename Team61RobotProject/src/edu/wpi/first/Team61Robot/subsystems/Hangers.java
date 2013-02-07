@@ -18,7 +18,7 @@ public class Hangers extends Subsystem {
     // here. Call these from Commands.
     
     private Solenoid hangerOut = new Solenoid(RobotMap.hangerOutSolenoid);
-    private Solenoid hangerIn = new Solenoid(RobotMap.hangerOutSolenoid);
+    private Solenoid hangerIn = new Solenoid(RobotMap.hangerInSolenoid);
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
