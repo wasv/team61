@@ -64,12 +64,13 @@ public class Team61Robot extends IterativeRobot {
 
         autonomousCommand = new AutonomousGroup();
 
+
         // Initialize all subsystems
         
         // Make compressor active on startup so it can be used in the pits
         compressor = new Compressor(RobotMap.compressorRelay,RobotMap.compressorSensor);
-        
-        compressor.stop();
+        compressor.start();       
+        // compressor.stop();
         
         
         CommandBase.init();
@@ -99,7 +100,6 @@ public class Team61Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         autonomousCommand.cancel();
-        compressor.start();
     }
 
     /**
