@@ -96,12 +96,12 @@ public class DriveTrain extends PIDSubsystem {
     private void moveLeftArm(double speed)
     {
         leftMotor.set(speed);
-        /*
-        if (speed > 0.0 && leftTopLimit.get())
+        
+        if (speed > 0.0 && topLimit.get())
         {
             leftMotor.set(0.0);
         }
-        else if (speed < 0.0 && leftBottomLimit.get())
+        else if (speed < 0.0 && bottomLimit.get())
         {
             leftMotor.set(0.0);
         }
@@ -109,18 +109,18 @@ public class DriveTrain extends PIDSubsystem {
         {
             leftMotor.set(speed);
         }
-         */
+         
     }
     
     private void moveRightArm(double speed)
     {
         rightMotor.set(speed);
-        /*
-        if (speed > 0.0 && rightTopLimit.get())
+        
+        if (speed > 0.0 && topLimit.get())
         {
             rightMotor.set(0.0);
         }
-        else if (speed < 0.0 && rightBottomLimit.get())
+        else if (speed < 0.0 && bottomLimit.get())
         {
             rightMotor.set(0.0);
         }
@@ -128,6 +128,6 @@ public class DriveTrain extends PIDSubsystem {
         {
             rightMotor.set(speed);
         }
-        */
+        
     }
 }

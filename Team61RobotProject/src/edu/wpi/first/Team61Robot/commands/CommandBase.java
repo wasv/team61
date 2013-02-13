@@ -27,9 +27,9 @@ public abstract class CommandBase extends Command {
     
     
     
-    public static double autoLeftSpeed[]        = { 0.5, 0.4, 0.5, 0.4, 0.5 };
-    public static double autoRightSpeed[]       = { -0.5, 0.4, -0.5, 0.4, -0.5 };
-    public static double autoDriveTime[]        = { 1.0, 0.55, 0.5, 0.55, 1.0 };
+    public static double autoLeftSpeed[]        = { 0.0, 0.0, 0.0, 0.0, 0.0 };
+    public static double autoRightSpeed[]       = { 0.0, 0.0, 0.0, 0.0, 0.0 };
+    public static double autoDriveTime[]        = { 0.0, 0.0, 0.0, 0.0, 0.0 };
             
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
