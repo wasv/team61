@@ -97,7 +97,7 @@ public class DriveTrain extends PIDSubsystem {
     {
         leftMotor.set(speed);
         
-        if (speed > 0.0 && topLimit.get())
+        if (speed > 0.0 && bottomLimit.get())
         {
             leftMotor.set(0.0);
         }
@@ -116,7 +116,7 @@ public class DriveTrain extends PIDSubsystem {
     {
         rightMotor.set(speed);
         
-        if (speed > 0.0 && topLimit.get())
+        if (speed > 0.0 && bottomLimit.get())
         {
             rightMotor.set(0.0);
         }
