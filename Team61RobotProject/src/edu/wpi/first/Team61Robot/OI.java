@@ -1,6 +1,8 @@
 
 package edu.wpi.first.Team61Robot;
 
+import edu.wpi.first.Team61Robot.commands.DumperIn;
+import edu.wpi.first.Team61Robot.commands.DumperOut;
 import edu.wpi.first.Team61Robot.commands.HangerIn;
 import edu.wpi.first.Team61Robot.commands.HangerOut;
 import edu.wpi.first.Team61Robot.commands.ShiftToClimb;
@@ -27,16 +29,17 @@ public class OI {
     Joystick jFour = new Joystick(4);
    Button driveButton = new JoystickButton(jLeft, 1);
    Button climbButton = new JoystickButton(jRight, 1);
-   Button hangerOut = new JoystickButton(jLeft, 7);
-   Button hangerIn = new JoystickButton(jLeft, 6);
+   Button hangerOut = new JoystickButton(jThree, 1);
+   Button hangerIn = new JoystickButton(jFour, 1);
    Button forwardButton = new JoystickButton (jRight,2);
    Button reverseButton = new JoystickButton (jRight,3);
-   
+   Button dumperOut= new JoystickButton (jLeft,6);
+   Button dumperIn= new JoystickButton (jLeft,7);
    
    private static boolean driveMode = true;
    private static boolean reverseDriveMode=false ;
-   public static boolean rightClawUp = true;
-   public static boolean leftClawUp = true; 
+   //public static boolean rightClawUp = true;
+  // public static boolean leftClawUp = true; 
    
     // Button shootButton = new JoystickButton(jShooter, 1);
     
@@ -73,6 +76,9 @@ public class OI {
       climbButton.whenPressed (new ShiftToClimb());
       hangerOut.whenPressed(new HangerOut());
       hangerIn.whenPressed(new HangerIn());
+      dumperIn.whenPressed(new DumperIn());
+      dumperOut.whenPressed(new DumperOut());
+      
       
       
         

@@ -30,8 +30,8 @@ public class DriveTrain extends PIDSubsystem {
     
     // private DigitalInput leftTopLimit = new DigitalInput(RobotMap.leftTopLimitChannel);
     // private DigitalInput leftBottomLimit = new DigitalInput(RobotMap.leftBottomLimitChannel);
-    private DigitalInput topLimit = new DigitalInput(RobotMap.rightTopLimitChannel);
-    private DigitalInput bottomLimit = new DigitalInput(RobotMap.rightBottomLimitChannel);
+   
+    private DigitalInput bottomLimit = new DigitalInput(RobotMap.bottomLimitChannel);
 
     // Initialize your subsystem here
     public DriveTrain() {
@@ -86,41 +86,46 @@ public class DriveTrain extends PIDSubsystem {
      * @param right Arm movement
      */
     public void climb(double right) {
-        moveLeftArm(-1.0*(right));
-        moveRightArm(right);
+        //System.out.println("joystick value = " + right);
+        moveLeftMotor(right);
+        moveRightMotor(right);
     }
     /**
      * 
      * @param speed 
      */
-    private void moveLeftArm(double speed)
+    
+    private void moveLeftMotor(double speed)
     {
-        leftMotor.set(speed);
-        
-        if (speed > 0.0 && bottomLimit.get())
-        {
-            leftMotor.set(0.0);
-        }
-        else if (speed < 0.0 && bottomLimit.get())
+        //leftMotor.set(speed*-1.0);
+      
+       if (speed < 0.0 )
+       { 
+           leftMotor.set (speed*-1.0);
+               
+       }
+               
+              else if (speed > 0.0 && !bottomLimit.get())
         {
             leftMotor.set(0.0);
         }
         else
         {
-            leftMotor.set(speed);
+            leftMotor.set(speed*-1.0);
         }
-         
+        
     }
     
-    private void moveRightArm(double speed)
+    private void moveRightMotor(double speed)
     {
-        rightMotor.set(speed);
-        
-        if (speed > 0.0 && bottomLimit.get())
+      //rightMotor.set(speed);
+        //System.out.println("limit = " + bottomLimit.getSmartDashboardType());      
+        if (speed< 0.0)
         {
-            rightMotor.set(0.0);
+            rightMotor.set(speed);
         }
-        else if (speed < 0.0 && bottomLimit.get())
+       
+        else if (speed > 0.0 && !bottomLimit.get())
         {
             rightMotor.set(0.0);
         }
@@ -130,4 +135,6 @@ public class DriveTrain extends PIDSubsystem {
         }
         
     }
+
 }
+ 

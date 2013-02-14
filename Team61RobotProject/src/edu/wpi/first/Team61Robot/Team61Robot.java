@@ -14,8 +14,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.Team61Robot.commands.CommandBase;
+import edu.wpi.first.Team61Robot.commands.ShiftToDrive;
 import edu.wpi.first.wpilibj.Compressor;
-import edu.wpi.first.wpilibj.Timer;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -63,7 +63,10 @@ public class Team61Robot extends IterativeRobot {
         System.out.println("+-------------------------------------------+");
 
         autonomousCommand = new AutonomousGroup();
-
+      Command shiftToDriveCommand= new ShiftToDrive();
+      
+      shiftToDriveCommand.start();
+      shiftToDriveCommand.cancel();
 
         // Initialize all subsystems
         

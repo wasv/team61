@@ -22,13 +22,15 @@ public class RobotMap {
     // Digital outputs
     public static final int hangerOutSolenoid = 1;
     public static final int hangerInSolenoid = 2;
+    public static final int dumperInSolenlid= 7; 
+    public static final int dumperOutSolenlid= 8; 
     
     public static final int driveSolenoid = 5;
     public static final int armSolenoid = 6;
             
     // Digital inputs
-    public static final int rightTopLimitChannel = 3;
-    public static final int rightBottomLimitChannel = 4;
+    public static final int bottomLimitChannel = 3;
+    
 
     public static final int compressorSensor = 1;    
     public static final int compressorRelay = 1;
